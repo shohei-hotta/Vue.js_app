@@ -4,6 +4,22 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
-    <h1></h1>
+    <div id="app">
+      名前：<input v-model="name">
+      コース：<input v-model="course">
+      受講期：<input v-model="coursePeriod">
+      <br>
+      <button v-on:click="addStudent">追加</button>
+      <ul>
+        <li v-for="student in students">
+          ID {{ student.id }} / 
+          名前 {{ student.name }} / 
+          コース {{ student.course }} / 
+          受講期 {{ student.coursePeriod }} 
+        </li>
+      </ul>
+    </div>
+
+    <script src="sample.js"></script>
   </body>
 </html>
